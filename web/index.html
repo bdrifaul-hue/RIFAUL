@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIFAUL AI - Futuristic Voice Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="brand">
+        <span class="status-dot online" id="statusDot"></span>
+        <h1 class="logo-text">RIFAUL AI</h1>
+      </div>
+      <div class="header-actions">
+        <span class="status-pill" id="statusPill">ONLINE</span>
+        <select id="langSelect" class="lang-dropdown">
+          <option value="auto">Auto / স্বয়ংক্রিয়</option>
+          <option value="bn-BD">বাংলা (Bengali)</option>
+          <option value="en-US">English</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Animated AI Orb Section -->
+    <section class="orb-section">
+      <div class="orb-wrapper" id="orbWrapper">
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-core" id="orbCore"></div>
+        <div class="orb-glow"></div>
+      </div>
+      <p class="orb-status-text" id="orbStatusText">Ready • Ask anything or command an app in বাংলা / English</p>
+    </section>
+
+    <!-- Chat History -->
+    <main class="chat-container" id="chatContainer">
+      <div class="chat-bubble ai-bubble">
+        <div class="bubble-header">
+          <span class="badge">RIFAUL AI</span>
+          <span class="time">Just now</span>
+        </div>
+        <div class="bubble-body">
+          Hello! I am RIFAUL AI, your futuristic personal assistant.
+          <br><br>
+          আমি বাংলা এবং ইংরেজি দুটো ভাষাতেই কথা বলতে ও ওয়েব/ডিভাইস অ্যাপস পরিচালনা করতে পারি।
+          Try asking <em>"YouTube চালু করো"</em>, <em>"এখন কয়টা বাজে?"</em>, or <em>"Open Chrome"</em>!
+        </div>
+      </div>
+    </main>
+
+    <!-- Quick Commands -->
+    <div class="quick-commands">
+      <button class="cmd-chip" data-cmd="YouTube চালু করো">YouTube চালু করো</button>
+      <button class="cmd-chip" data-cmd="Facebook খোলো">Facebook খোলো</button>
+      <button class="cmd-chip" data-cmd="Chrome চালু করো">Chrome চালু করো</button>
+      <button class="cmd-chip" data-cmd="এখন কয়টা বাজে?">এখন কয়টা বাজে?</button>
+      <button class="cmd-chip" data-cmd="আজকের আবহাওয়া বলো">আজকের আবহাওয়া</button>
+      <button class="cmd-chip" data-cmd="Stop listening">Stop listening</button>
+    </div>
+
+    <!-- Active Banner -->
+    <div class="active-banner hidden" id="activeBanner">
+      <span class="active-text" id="activeText">Listening...</span>
+      <button class="stop-btn" id="stopBtn">Stop</button>
+    </div>
+
+    <!-- Control Bar -->
+    <footer class="control-bar">
+      <button class="mic-btn" id="micBtn" title="Microphone Input">
+        <svg viewBox="0 0 24 24" class="icon" fill="currentColor">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+          <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+        </svg>
+      </button>
+
+      <input type="text" id="textInput" class="text-input" placeholder="Type or ask RIFAUL AI...">
+
+      <button class="send-btn" id="sendBtn" title="Send message">
+        <svg viewBox="0 0 24 24" class="icon" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
